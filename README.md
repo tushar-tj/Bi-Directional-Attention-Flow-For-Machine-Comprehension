@@ -1,5 +1,5 @@
 # BiDaF-Squad-1.0
-The repo contains an implementation of Bidirectional Attention Flow for Machine Comprehension on Squad v1.0 & Cloze-Style Reading Comprehension as illustrated in the paper from [Minjoon Seo, Aniruddha Kembhavi, Ali Farhadi, Hannaneh Hajishirzi] (https://arxiv.org/pdf/1611.01603.pdf)
+The repo contains an implementation of Bidirectional Attention Flow for Machine Comprehension on Squad v1.0 & Cloze-Style Reading Comprehension as illustrated in the paper from [Minjoon Seo, Aniruddha Kembhavi, Ali Farhadi, Hannaneh Hajishirzi](https://arxiv.org/pdf/1611.01603.pdf)
 
 ## Training Results
 
@@ -7,9 +7,9 @@ The repo contains an implementation of Bidirectional Attention Flow for Machine 
 
 |                  **DATASET**                  |                 **RESULTS**           |
 |---------------------------------------------- |---------------------------------------|
-|                 SQuAD v1.1                    |       |
-| Cloze-Style Reading Comprehension (CNN)       |                                  |
-| Cloze-Style Reading Comprehension (DailyMail) |                                  |
+|                 SQuAD v1.1                    |                                       |
+| Cloze-Style Reading Comprehension (CNN)       |                                       |
+| Cloze-Style Reading Comprehension (DailyMail) |                                       |
 
 * Training Results Original Paper
 
@@ -29,7 +29,7 @@ When first running the train process use -load_data=True
 
 * Training **BIDAF** model on **SQUAD v1.1**
 ```
-python train.py -model_name=<model_name> -dataset_name=SQUAD
+python train.py -model_name=<model_name> -dataset_name=SQUAD -data=<path to data>
 ```
 
 * Training **BIDAF** model on **Cloze-Style Reading Comprehension**
@@ -40,7 +40,7 @@ python train.py -model_name=<model_name> -dataset_name=SQUAD
 #### EXAMPLE
 
 ```
-python train.py -model_name=LOCAL -dataset_name=SQUAD
+python train.py -model_name=LOCAL -dataset_name=SQUAD -data='../../../../data/squad v1.1/'
 ```
 
 *Note: Please check parameters section for complete details.*
@@ -52,6 +52,7 @@ To extract response from a context
 ```
 python predict.py -context=<context> -query=<query> -model_path=<path of trained model> -word_vocab=<path of WORD vocab> -char_vocab=<path of CHAR vocab>
 ```
+
 #### EXAMPLE
 ```
 python predict.py -context="He was speaking after figures showed that the country's economy shrank by 20.4% in April - the largest monthly contraction on record - as the country spent its first full month in lockdown." -query="By how much did the country's economy shrank" -model_path=./model_checkpoints/best_local_squadv1.1.torch -word_vocab=./model_checkpoints/SQUAD_WORDS.vocab -char_vocab=./model_checkpoints/SQUAD_CHAR.vocab
