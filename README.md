@@ -1,5 +1,5 @@
 # BiDaF-Squad-1.0
-The repo contains an implementation of Bidirectional Attention Flow for Machine Comprehension on Squad v1.0 & Cloze-Style Reading Comprehension as illustrated in the paper from Minjoon Seo, Aniruddha Kembhavi, Ali Farhadi, Hannaneh Hajishirzi
+The repo contains an implementation of Bidirectional Attention Flow for Machine Comprehension on Squad v1.0 & Cloze-Style Reading Comprehension as illustrated in the paper from [Minjoon Seo, Aniruddha Kembhavi, Ali Farhadi, Hannaneh Hajishirzi] (https://arxiv.org/pdf/1611.01603.pdf)
 
 ## Training Results
 
@@ -52,7 +52,7 @@ To extract response from a context
 ```
 python predict.py -context=<context> -query=<query> -model_path=<path of trained model> -word_vocab=<path of WORD vocab> -char_vocab=<path of CHAR vocab>
 ```
-####Example
+#### EXAMPLE
 ```
 python predict.py -context="He was speaking after figures showed that the country's economy shrank by 20.4% in April - the largest monthly contraction on record - as the country spent its first full month in lockdown." -query="By how much did the country's economy shrank" -model_path=./model_checkpoints/best_local_squadv1.1.torch -word_vocab=./model_checkpoints/SQUAD_WORDS.vocab -char_vocab=./model_checkpoints/SQUAD_CHAR.vocab
 
