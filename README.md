@@ -1,5 +1,5 @@
 # BiDaF
-The repo contains an implementation of Bidirectional Attention Flow for Machine Comprehension on Squad v1.0 & Cloze-Style Reading Comprehension as illustrated in the paper from [Minjoon Seo, Aniruddha Kembhavi, Ali Farhadi, Hannaneh Hajishirzi](https://arxiv.org/pdf/1611.01603.pdf)
+Implementation of Bidirectional Attention Flow for Machine Comprehension on Squad v1.0 & Cloze-Style Reading Comprehension as illustrated in the paper from [Minjoon Seo, Aniruddha Kembhavi, Ali Farhadi, Hannaneh Hajishirzi](https://arxiv.org/pdf/1611.01603.pdf)
 
 ## Training Results
 
